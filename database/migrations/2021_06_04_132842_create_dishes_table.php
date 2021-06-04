@@ -18,6 +18,7 @@ class CreateDishesTable extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');;
             $table->string('name', 50)->unique();
             $table->text('ingredients');
+            $table->string('image');
             $table->float('price', 5, 2);
             $table->timestamps();
         });
