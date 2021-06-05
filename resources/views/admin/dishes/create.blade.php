@@ -7,6 +7,16 @@
 @section('content')
 
 <div class="container">
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
     <h1>nuovo piatto</h1>
     <form action="{{route('admin.dishes.store')}}" method="POST" enctype="multipart/form-data">
         @method('POST')

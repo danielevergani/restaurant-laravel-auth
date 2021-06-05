@@ -8,7 +8,7 @@ class Dish extends Model
 {
     protected $table = 'dishes';
 
-    protected $guarded = [];
+    protected $guarded = ['allergenes'];
 
     public function user()
     {
