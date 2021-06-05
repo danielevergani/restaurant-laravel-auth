@@ -7,7 +7,7 @@
 @section('content')
 <div class="container">
     <h1>{{$dish -> name}}</h1>
-    <img src="" alt="">
+    <img src="{{asset('storage/' . $dish->image)}}" alt="">
     <p> {{$dish -> ingredients}} </p>
     <p><strong>{{$dish -> price}} €</strong> </p>
 </div>
