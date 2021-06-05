@@ -12,7 +12,7 @@
             <h3> {{$dish -> name}} </h3>
             <p> {{$dish -> ingredients}} </p>
             <p><strong>{{$dish -> price}} €</strong></p>
-            <a href="#">dettagli</a>
+            <a href="{{route('admin.dishes.show', ['dish' => $dish -> id])}}">dettagli</a>
         </div>
     @endforeach
 </div>
