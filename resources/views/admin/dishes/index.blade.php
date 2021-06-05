@@ -6,7 +6,11 @@
 
 @section('content')
 <div class="container">
-    <h1>ELENCO PIATTI</h1>
+    <div class="titolo_add">
+        <h1>ELENCO PIATTI</h1>
+        <a class="add_dish" href="{{route('admin.dishes.create')}}"><i class="fas fa-plus-circle"></i></a>
+    </div>
+    
     @foreach ($dishes as $dish)
         <div class="piatto">
             <h3> {{$dish -> name}} </h3>

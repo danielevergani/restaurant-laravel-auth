@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Dish;
+use App\Allergen;
 
 class DishController extends Controller
 {
@@ -26,7 +27,8 @@ class DishController extends Controller
      */
     public function create()
     {
-        //
+        $allergenes = Allergen::all();
+        return view('admin.dishes.create', compact('allergenes') );
     }
 
     /**
